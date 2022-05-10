@@ -1,0 +1,2 @@
+concat([],Z,Z).
+concat([X|T1],T2,[X|T3]) :- concat(T1,T2,T3).

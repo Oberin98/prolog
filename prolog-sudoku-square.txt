@@ -1,0 +1,28 @@
+digit(1).
+digit(2).
+digit(3).
+digit(4).
+digit(5).
+digit(6).
+digit(7).
+digit(8).
+digit(9).
+
+sudoku_square([A,B,C,D,E,F,G,H,I]) :-
+  digit(A),
+  digit(B), B \== A,
+  digit(C), C \== A, C \== B,
+  digit(D), D \== A, D \== B, D \== C,
+  digit(E), E \== A, E \== B, E \== C, E \== D,
+  digit(F), F \== A, F \== B, F \== C, F \== D, F \== E,
+  digit(G), G \== A, G \== B, G \== C, G \== D, G \== E, G \== F,
+  digit(H), H \== A, H \== B, H \== C, H \== D, H \== E, H \== F, H \== G,
+  digit(I), I \== A, I \== B, I \== C, I \== D, I \== E, I \== F, I \== G, I \== H,
+  15 is A + B + C,
+  15 is D + E + F,
+  15 is G + H + I,
+  15 is A + D + G,
+  15 is B + E + H,
+  15 is C + F + I,
+  15 is A + E + I,
+  15 is C + E + G.

@@ -1,0 +1,9 @@
+parents(zuza, karol, jana).
+parents(zuza, karol, dana).
+parents(zuza, karol, milan).
+parents(jana, jano, peter).
+parents(jana, jano, anna).
+parents(anna, jozo, viera).
+
+descendant(Child, Parent) :- parents(Parent, _, Child);  parents(_, Parent, Child).
+descendant(Grandchild, Grandparent) :- descendant(Parent, Grandparent), descendant(Grandchild, Parent).

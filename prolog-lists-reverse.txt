@@ -1,0 +1,2 @@
+reverse([],[]).
+reverse([H|B], X) :- reverse(B, V), concat(V, [H], X).

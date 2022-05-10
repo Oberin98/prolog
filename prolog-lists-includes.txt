@@ -1,0 +1,3 @@
+includes([], _) :- fail.
+includes([H|_], X) :- H == X, !.
+includes([H|B], X) :- H \== X, includes(B, X).

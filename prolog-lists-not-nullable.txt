@@ -1,0 +1,3 @@
+not_nullable([]).
+not_nullable([0|Body]) :- not_nullable(Body).
+not_nullable([Head|Body]) :- write(Head), nl, not_nullable(Body).

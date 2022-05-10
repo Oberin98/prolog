@@ -1,0 +1,2 @@
+sum([], 0).
+sum([Head|Body], Result) :- sum(Body, Result1), Result is Result1 + Head.

@@ -1,0 +1,15 @@
+digit(0).
+digit(1).
+digit(2).
+digit(3).
+
+define_numbers([A,B,C,D,E,F,G,H,I]) :-
+  digit(A), digit(B), digit(C),
+  digit(D), digit(E), digit(F),
+  digit(G), digit(H), digit(I),
+  6 is A * B * C,
+  6 is D + E + F,
+  6 is G + H + I,
+  4 is A + D + G,
+  4 is B - E + H,
+  4 is C + F - I.

@@ -1,0 +1,2 @@
+remove(Item, [Item|Body], Body).
+remove(Item, [Head|Body], [Head|Body1]) :- remove(Item, Body, Body1).

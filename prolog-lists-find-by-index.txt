@@ -1,0 +1,2 @@
+find_by_index(Index, [_|Body], Item) :- NextIndex is Index - 1, find_by_index(NextIndex, Body, Item).
+find_by_index(0, [Head|_], Item) :- Item is Head.

@@ -1,0 +1,9 @@
+star(0).
+star(N) :- N1 is N - 1, star(N1), write('*').
+
+triangle(0).
+triangle(N) :- N1 is N - 1, star(N), nl, triangle(N1).
+
+triangle_reverse(X) :- triangle_reverse(X, 0).
+triangle_reverse(X, Y) :- Y < X, Y1 is Y + 1, star(Y1), nl, triangle_reverse(X, Y1).
+triangle_reverse(X, Y) :- Y >= X.
